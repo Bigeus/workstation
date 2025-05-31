@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "549118824549",
+    "project_id": "workstation-824c1",
+    "storage_bucket": "workstation-824c1.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:549118824549:android:8d1a0e14a1610bbd41b68c",
+        "android_client_info": {
+          "package_name": "com.example.workstation"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDd0cYetvHYv5M6mgfgDmFYVtvAAqxprgk"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
