@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="300dp"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:background="@drawable/rounded_modal_background"
+    android:padding="24dp">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Nova Task"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        android:textColor="@android:color/white"
+        android:layout_gravity="center"
+        android:layout_marginBottom="20dp" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Nome da Task:"
+        android:textColor="@android:color/white"
+        android:textSize="14sp"
+        android:layout_marginBottom="8dp" />
+
+    <EditText
+        android:id="@+id/taskNameEdit"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Digite o nome da task"
+        android:textColor="@android:color/white"
+        android:textColorHint="@android:color/darker_gray"
+        android:background="@drawable/rounded_edittext"
+        android:padding="12dp"
+        android:layout_marginBottom="16dp" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Prioridade:"
+        android:textColor="@android:color/white"
+        android:textSize="14sp"
+        android:layout_marginBottom="8dp" />
+
+    <RadioGroup
+        android:id="@+id/priorityGroup"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_marginBottom="20dp">
+
+        <RadioButton
+            android:id="@+id/priority1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Prioridade 1 (Azul)"
+            android:textColor="@color/priority_blue"
+            android:buttonTint="@color/priority_blue"
+            android:checked="true" />
+
+        <RadioButton
+            android:id="@+id/priority2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Prioridade 2 (Amarelo)"
+            android:textColor="@color/priority_yellow"
+            android:buttonTint="@color/priority_yellow" />
+
+        <RadioButton
+            android:id="@+id/priority3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Prioridade 3 (Vermelho)"
+            android:textColor="@color/priority_red"
+            android:buttonTint="@color/priority_red" />
+
+    </RadioGroup>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:gravity="end">
+
+        <Button
+            android:id="@+id/cancelButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Cancelar"
+            android:backgroundTint="@android:color/darker_gray"
+            android:layout_marginEnd="8dp" />
+
+        <Button
+            android:id="@+id/addTaskButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Adicionar"
+            android:backgroundTint="@color/teal_200"
+            android:textColor="@android:color/black" />
+
+    </LinearLayout>
+
+</LinearLayout>

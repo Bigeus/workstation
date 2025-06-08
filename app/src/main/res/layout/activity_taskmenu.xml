@@ -1,21 +1,224 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    xmlns:tools="http://schemas.android.com/tools"
-    android:id="@+id/main"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".taskmenu">
+    android:orientation="vertical"
+    android:background="@drawable/starry_drawable"
+    android:padding="16dp">
 
+    <!-- Header com lua e título -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:gravity="center_vertical"
+        android:layout_marginBottom="20dp">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="🌜"
+            android:textSize="32sp" />
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="Lunar Workstation"
+            android:textColor="@android:color/white"
+            android:textSize="24sp"
+            android:textStyle="bold"
+            android:gravity="center"
+            android:fontFamily="@font/aldrich" />
+
+    </LinearLayout>
+
+    <!-- Controles de música MELHORADOS -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:background="@drawable/rounded_background_dark"
+        android:padding="16dp"
+        android:layout_marginBottom="16dp">
+
+        <!-- Linha superior: Play/Pause e Status -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="center_vertical"
+            android:layout_marginBottom="12dp">
+
+            <ImageView
+                android:id="@+id/playPauseButton"
+                android:layout_width="48dp"
+                android:layout_height="48dp"
+                android:src="@drawable/ic_play"
+                android:background="@drawable/circular_button"
+                android:padding="12dp"
+                android:clickable="true"
+                android:focusable="true" />
+
+            <TextView
+                android:id="@+id/currentVideoText"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="🎵 Selecione uma rádio lofi"
+                android:textColor="@android:color/white"
+                android:textSize="14sp"
+                android:layout_marginStart="16dp"
+                android:ellipsize="marquee"
+                android:singleLine="true"
+                android:marqueeRepeatLimit="marquee_forever"
+                android:scrollHorizontally="true" />
+
+        </LinearLayout>
+
+        <!-- Controle de Volume -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="center_vertical">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="🔊"
+                android:textSize="16sp"
+                android:layout_marginEnd="8dp" />
+
+            <SeekBar
+                android:id="@+id/volumeSeekBar"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:max="100"
+                android:progress="50"
+                android:progressTint="@color/teal_200"
+                android:thumbTint="@color/teal_200" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="50%"
+                android:id="@+id/volumeText"
+                android:textColor="@android:color/white"
+                android:textSize="12sp"
+                android:layout_marginStart="8dp"
+                android:minWidth="35dp"
+                android:gravity="center" />
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+    <!-- Opções de Lives Lofi MELHORADAS-->
     <TextView
-        android:id="@+id/textView"
-        android:layout_width="71dp"
-        android:layout_height="77dp"
-        android:layout_marginTop="16dp"
-        android:text="🌜"
-        android:textSize="48sp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.076"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
-</androidx.constraintlayout.widget.ConstraintLayout>
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="🎧 Estações Lofi Disponíveis: (Recomendado Lofi Radio)"
+        android:textColor="@android:color/white"
+        android:textSize="16sp"
+        android:textStyle="bold"
+        android:layout_marginBottom="12dp" />
+
+    <!-- Grid de botões de rádio -->
+    <GridLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:columnCount="2"
+        android:rowCount="3"
+        android:layout_marginBottom="20dp">
+
+        <Button
+            android:id="@+id/lofi1Button"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_columnWeight="1"
+            android:layout_margin="4dp"
+            android:text="🎵 Lofi Radio"
+            android:textSize="12sp"
+            android:backgroundTint="@color/purple_500"
+            android:textColor="@android:color/white" />
+
+        <Button
+            android:id="@+id/lofi2Button"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_columnWeight="1"
+            android:layout_margin="4dp"
+            android:text="🎶 ChillHop"
+            android:textSize="12sp"
+            android:backgroundTint="@color/purple_500"
+            android:textColor="@android:color/white" />
+
+        <Button
+            android:id="@+id/lofi3Button"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_columnWeight="1"
+            android:layout_margin="4dp"
+            android:text="🎼 ILove Chill"
+            android:textSize="12sp"
+            android:backgroundTint="@color/purple_500"
+            android:textColor="@android:color/white" />
+
+        <Button
+            android:id="@+id/lofi4Button"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_columnWeight="1"
+            android:layout_margin="4dp"
+            android:text="🎹 Chill Beats"
+            android:textSize="12sp"
+            android:backgroundTint="@color/purple_500"
+            android:textColor="@android:color/white" />
+
+        <Button
+            android:id="@+id/lofi5Button"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_columnWeight="1"
+            android:layout_margin="4dp"
+            android:text="🎤 Hip Hop Lofi"
+            android:textSize="12sp"
+            android:backgroundTint="@color/purple_500"
+            android:textColor="@android:color/white" />
+
+    </GridLayout>
+
+    <!-- Botão Adicionar Task -->
+    <Button
+        android:id="@+id/addTaskButton"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="➕ Adicionar Task"
+        android:textSize="16sp"
+        android:textStyle="bold"
+        android:backgroundTint="@color/teal_200"
+        android:textColor="@android:color/black"
+        android:layout_marginBottom="16dp"
+        android:onClick="showAddTaskModal" />
+
+    <!-- Lista de Tasks -->
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="📋 Suas Tasks:"
+        android:textColor="@android:color/white"
+        android:textSize="16sp"
+        android:textStyle="bold"
+        android:layout_marginBottom="8dp" />
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/recyclerViewTasks"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:background="@drawable/rounded_background_semi_transparent" />
+
+</LinearLayout>
