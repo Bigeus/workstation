@@ -85,6 +85,13 @@ Após a instalação bem-sucedida:
 3. **Menu de tarefas:** Acesse via `TaskMenu` para gerenciar suas atividades
 4. **Explorar funcionalidades** disponíveis na interface
 
+## 🖼️ Capturas de Tela
+
+| Tela de Login | Menu de Tarefas |
+|:-------------:|:---------------:|
+| ![Tela de Login](imgs/login.png) | ![Menu de Tarefas](imgs/menu.png) |
+
+
 ## 🤝 Contribuição
 
 Contribuições são sempre bem-vindas! Para colaborar:
